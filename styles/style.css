@@ -1,5 +1,6 @@
 :root {
   --blanco: #ffffff;
+  --oscuro:#272727;
 }
 
 /* Reset CSS*/
@@ -41,7 +42,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 1rem;
+  padding: 1rem;
 }
 .rrss{
     display: flex;
@@ -66,6 +67,71 @@ a {
   gap: 2rem;
 }
 
-.hero{
-    background-image: url(../img/Gorillaz-Mixmag-Web4.jpg);
+
+/* Estilo para el fondo de .hero con superposición */
+.hero {
+    position: relative;
+    background-image: url(../img/gorillaz-hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
+
+.contenedor-titulo{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.anniversary{
+    color: var(--blanco);
+font-family: "DM Sans";
+font-size: 3.3125rem;
+font-style: normal;
+font-weight: 500;
+line-height: 86%; /* 2.84875rem */
+letter-spacing: -0.06625rem;
+text-align: center;
+}
+
+.demondays{
+color: #FFF;
+font-size: 9rem;
+font-style: normal;
+font-weight: 800;
+line-height: 86%; /* 8.6rem */
+letter-spacing: -0.2rem;
+display: flex;
+}
+
+.pill-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: first baseline;
+    width: 70%;
+}
+
+.pill{
+border-radius: 0.6875rem;
+background: #FFF;
+box-shadow: 0px 0px 8.988px 0px rgba(0, 0, 0, 0.25);
+width: fit-content;
+padding: 0 1rem ;
+}
+
+.pill p{
+    font-size: 2rem;
+    color: var(--oscuro);
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
