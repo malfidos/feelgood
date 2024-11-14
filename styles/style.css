@@ -75,6 +75,7 @@ a {
     background-image: url(../img/gorillaz-hero.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 100vh;
 }
 
@@ -96,7 +97,7 @@ a {
 .anniversary{
     color: var(--blanco);
 font-family: "DM Sans";
-font-size: 3.3125rem;
+font-size: 3vw;
 font-style: normal;
 font-weight: 500;
 line-height: 86%; /* 2.84875rem */
@@ -106,9 +107,10 @@ text-align: center;
 
 .demondays{
 color: #FFF;
-font-size: 9rem;
+font-size: 9.6vw;
 font-style: normal;
 font-weight: 800;
+max-width: 60rem;
 line-height: 86%; /* 8.6rem */
 letter-spacing: -0.2rem;
 display: flex;
@@ -119,6 +121,8 @@ display: flex;
     flex-direction: row;
     justify-content: first baseline;
     width: 70%;
+    height: fit-content;
+
 }
 
 .pill{
@@ -127,25 +131,34 @@ background: #FFF;
 box-shadow: 0px 0px 8.988px 0px rgba(0, 0, 0, 0.25);
 width: fit-content;
 padding: 0 1rem ;
+height: fit-content;
 }
 
 .green{
-    background: #00FF85;    ;
+    background: #00FF85;  
+    margin-top: 1rem;  
+    transition: ease-in-out 0.3s;
+}
+
+.green:hover{
+    background: #49f1a0;  
 }
 
 .pill p{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--oscuro);
     font-weight: bolder;
     text-transform: uppercase;
 }
 
+
 .body-vinyl{
-    height: 60vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
 }
 
 
@@ -160,6 +173,16 @@ letter-spacing: -0.03rem;
 width: 70%;
 }
 
+.bio-header{
+    color: #FFF;
+font-family: "DM Sans";
+font-size: 2rem;
+font-weight: 400;
+line-height: 150%; /* 3.3rem */
+letter-spacing: -0.03rem;
+text-align: left;
+}
+
 .bio2{
     padding: 2rem;
     color: #FFF;
@@ -172,10 +195,146 @@ letter-spacing: -0.0125rem;
 width: 70%;
 }
 
+.product-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.text-vinyl{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
 
 .pill-container-price{
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 70%;
+}
+
+
+.band{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.container-band{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+}
+
+.band div{
+    padding: 2rem;
+}
+
+.band-img{
+    width: 100%;
+    border-radius: 0.5rem;
+    transition: ease-in-out 0.3s;
+}
+
+.band-img:hover{
+    scale: 1.02;
+}
+
+.bio-band{
+    padding: 0.8rem 0;
+    color: #FFF;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%; /* 1.75rem */
+    letter-spacing: -0.0125rem;
+    text-align: left;
+}
+.container-vinyl {
+    border-radius: 0.7rem;
+    width: 50vw;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    transition: ease-in-out 0.3s;
+}
+
+.container-vinyl:hover{
+    scale: 1.02;
+}
+
+#album {
+    width: fit-content;
+    position: relative;
+    height: 14vw;
+    margin: 2rem;
+}
+
+#cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14vw;
+    height: 14vw;
+    background-image: url('../img/cover.webp');
+    background-size: cover;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+#vinyl {
+    position: absolute;
+    top: 0;
+    left: 6.9vw;
+    width: 14vw;
+    height: 14vw;
+    background-image: url('../img/vinilo-verde.png');
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(0 0 20px 4px rgba(0, 0, 0, 0.6));
+    animation: 8s linear giro infinite, 1s ease-out getOut 1s forwards;
+    z-index: 1;
+}
+
+
+@keyframes giro {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.logo img{
+    width: 10rem;
+    filter: invert(1);
+    margin: 2rem;
+    transition: ease-in-out 0.3s;
+}
+
+.logo img:hover {
+    filter: invert(37%) sepia(87%) saturate(300%) hue-rotate(85deg) brightness(170%);}
+
+.cita{
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cita-texto{
+font-weight: 400;
+padding: 1rem;
 }
