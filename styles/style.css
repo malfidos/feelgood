@@ -108,11 +108,11 @@ a {
 
 .demondays {
   color: #fff;
-  font-size: 9.6vw;
+  font-size: 8.6vw;
   font-style: normal;
   font-weight: 800;
   max-width: 60rem;
-  line-height: 86%; /* 8.6rem */
+  line-height: 10.6vw; /* 8.6rem */
   letter-spacing: -0.2rem;
   display: flex;
 }
